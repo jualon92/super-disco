@@ -2,9 +2,9 @@
 <div class="navbar">
    <h2>Acciones</h2>
      <ul>
-         <li >Ver lista estudiantes</li>
-       <li >Agregar</li>
-       <li  >Eliminar</li>
-       <li  >Modificar</li>
+         <li (click)="navigate('students')">Ver lista estudiantes</li>
+       <li (click)="navigate('add')">Agregar</li>
+       <li (click)="navigate('delete')">Eliminar</li>
+       <li (click)="navigate('edit')">Modificar</li>
      </ul>
 </div>
