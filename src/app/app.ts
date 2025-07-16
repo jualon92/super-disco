@@ -7,15 +7,17 @@ import { Student } from '../shared/entities';
 import { CommonModule } from '@angular/common';
 import { StudentsTable } from "./students-table/students-table";
 import { AddForm } from "./add-form/add-form";
+import { DeleteForm } from './delete-form/delete-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Toolbar, Navbar, CommonModule, StudentsTable, AddForm],
+  imports: [DeleteForm,RouterOutlet, Toolbar, Navbar, CommonModule, StudentsTable, AddForm],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App implements OnInit {
   students: Student[] = [];
+  activeSection = "students";
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -33,6 +35,12 @@ export class App implements OnInit {
    /*  this.students.push(student); */
    //perder referencia
     this.students = [...this.students, student]; 
+  }
+
+  deleteStudent(dni: string) {
+     
+     const studentsList = this.students.filter(student => student.dni.toString() !== dni);
+    this.students = [...studentsList];  
   }
 
 }
