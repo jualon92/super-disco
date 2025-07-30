@@ -1,0 +1,46 @@
+{
+  "courses": [
+    {
+      "name": "Matemáticas",
+      "code": "MAT101",
+      "credits": 5,
+      "id": "d3fd"
+    },
+    {
+      "name": "Programación",
+      "code": "PROG102",
+      "credits": 6,
+      "id": "570f"
+    },
+    {
+      "name": "Física",
+      "code": "FIS103",
+      "credits": 4,
+      "id": "00db"
+    },
+    {
+      "name": "Química",
+      "code": "QUI104",
+      "credits": 3,
+      "id": "2eb4"
+    }
+  ],
+  "students": [
+    {
+      "name": "Ana",
+      "surname": "Martínez",
+      "age": 19,
+      "id": "4",
+      "dni": "4",
+      "average": 8
+    },
+    {
+      "name": "Luis",
+      "surname": "Fernández",
+      "age": 23,
+      "id": "5",
+      "dni": 23456789,
+      "average": 9.5
+    }
+  ]
+}
